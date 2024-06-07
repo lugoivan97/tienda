@@ -6,6 +6,35 @@
     <title>Nosotros</title>
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
+    <style>
+        /* Estilos para el botón flotante del carrito */
+        .btn-carrito {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            justify-content: center;
+        }
+        .btn-carrito .badge {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background-color: red;
+            color: white;
+            border-radius: 50%;
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -39,47 +68,47 @@
     </header>
     <main>
         <h1 class="titulos">Todos nuestros productos</h1>
-        <p class="productos-desc">¡Arma tu carrito como mas te guste! Pero antes no olvides de fijarte nuestras
+        <p class="productos-desc">¡Arma tu carrito como más te guste! Pero antes no olvides de fijarte nuestras
              <a class="ref-prom-prod" href="./promociones.html">PROMOCIONES</a>
         </p>
         <section class="producto-grilla">
             <div class="producto">
-                    <img src="../img/imgjoystick1.jpg" alt="Joystick">
+                    <img src="img/imgjoystick1.jpg" alt="Joystick">
                     <p>Joystick 1</p>
-                    <p>Joystick Inalambrico a bateria</p>
+                    <p>Joystick Inalámbrico a batería</p>
                     <p>$20000</p>
                     <button onclick="agregarAlCarrito('Joystick 1', 20000)">Agregar al carrito</button>
             </div>
             <div class="producto">
-                    <img src="../img/imgjoystick2.jpg" alt="Joystick">
+                    <img src="img/imgjoystick2.jpg" alt="Joystick">
                     <p>Joystick 2</p>
-                    <p>Joystick Inalambrico a bateria</p>
+                    <p>Joystick Inalámbrico a batería</p>
                     <p>$20000</p>
                     <button onclick="agregarAlCarrito('Joystick 2', 20000)">Agregar al carrito</button>
             </div>
             <div class="producto">
-                    <img src="../img/imgjoystick3.jpg" alt="Joystick">
+                    <img src="img/imgjoystick3.jpg" alt="Joystick">
                     <p>Joystick 3</p>
-                    <p>Joystick Inalambrico a bateria</p>
+                    <p>Joystick Inalámbrico a batería</p>
                     <p>$20000</p>
                     <button onclick="agregarAlCarrito('Joystick 3', 20000)">Agregar al carrito</button>
             </div>
             <div class="producto">
-                    <img src="../img/imgsmartw1.jpg" alt="SmartWatch">
+                    <img src="img/imgsmartw1.jpg" alt="SmartWatch">
                     <p>SmartWatch 1</p>
                     <p>Reloj Inteligente</p>
                     <p>$20000</p>
                     <button onclick="agregarAlCarrito('SmartWatch 1', 20000)">Agregar al carrito</button>
             </div>
             <div class="producto">
-                    <img src="../img/imgsmartw2.jpg" alt="SmartWatch">
+                    <img src="img/imgsmartw2.jpg" alt="SmartWatch">
                     <p>SmartWatch 2</p>
                     <p>Reloj de Mano</p>
                     <p>$20000</p>
                     <button onclick="agregarAlCarrito('SmartWatch 2', 20000)">Agregar al carrito</button>
             </div>
             <div class="producto">
-                    <img src="../img/imgsmartw3.jpg" alt="SmartWatch">
+                    <img src="img/imgsmartw3.jpg" alt="SmartWatch">
                     <p>SmartWatch 3</p>
                     <p>Reloj de Mano</p>
                     <p>$20000</p>
@@ -87,12 +116,16 @@
             </div>
         </section>
 
-        <button class="btn btn-primary" data-toggle="modal" data-target="#carritoModal">Ver Carrito</button>
+        <!-- Botón flotante del carrito -->
+        <button class="btn-carrito" data-toggle="modal" data-target="#carritoModal">
+            <i class="fas fa-shopping-cart"></i>
+            <span id="carrito-count" class="badge">0</span>
+        </button>
 
         <section>
             <h2 class="seguinos-pro">Seguinos</h2>
             <a href="https://www.instagram.com/ivanstienda?igsh=MWw4MHI5eWx3dHltMg==" target="_blank">
-                <img class="logoig" src="../img/imginta.webp" alt="Instagram de Ivan's Store">
+                <img class="logoig" src="img/imginta.webp" alt="Instagram de Ivan's Store">
             </a>
         </section>
     </main>
@@ -112,7 +145,7 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <ul id="carrito" class="list-group">
+                    <ul id="carrito-list" class="list-group">
                     </ul>
                 </div>
                 <div class="modal-footer">
@@ -145,7 +178,8 @@
         }
 
         function actualizarCarrito() {
-            const carritoElement = document.getElementById('carrito');
+            const carritoElement = document.getElementById('carrito-list');
+            const carritoCount = document.getElementById('carrito-count');
             carritoElement.innerHTML = '';
             carrito.forEach((producto, index) => {
                 const li = document.createElement('li');
@@ -158,17 +192,18 @@
                 li.appendChild(botonEliminar);
                 carritoElement.appendChild(li);
             });
+            carritoCount.textContent = carrito.length;
         }
 
         function enviarPorWhatsApp() {
-            const numero = '5491123456789'; // Reemplazar con el número de teléfono destino
+            const numero = '5493484698036'; // Reemplazar con el número de teléfono destino
             let mensaje = 'Hola, me gustaría comprar estos productos:\n';
             carrito.forEach(producto => {
                 mensaje += `- ${producto.nombre} - $${producto.precio}\n`;
             });
-            const url = `https://api.whatsapp.com/send?phone=${numero}&text=${encodeURIComponent(mensaje)}`;
-            window.open(url, '_blank');
-        }
+            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+                window.open(url, '_blank');
+            }
     </script>
 </body>
 </html>
