@@ -7,34 +7,6 @@
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- Font Awesome -->
-    <style>
-        /* Estilos para el botón flotante del carrito */
-        .btn-carrito {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            z-index: 1000;
-            display: flex;
-            align-items: center;
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 50%;
-            width: 60px;
-            height: 60px;
-            justify-content: center;
-        }
-        .btn-carrito .badge {
-            position: absolute;
-            top: 5px;
-            right: 5px;
-            background-color: red;
-            color: white;
-            border-radius: 50%;
-            padding: 5px 10px;
-            font-size: 12px;
-        }
-    </style>
 </head>
 <body>
     <header>
@@ -72,7 +44,7 @@
              <a class="ref-prom-prod" href="./promociones.html">PROMOCIONES</a>
         </p>
         <div class="container">
-            <input type="text" id="buscador" class="form-control mb-4" placeholder="Buscar productos...">
+            <input type="text" id="buscador" class="form-control mb-4 buscador" placeholder="Buscar productos...">
         </div>
         <section class="producto-grilla" id="producto-grilla">
             <div class="producto">
@@ -162,68 +134,6 @@
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        let carrito = [];
-
-        function agregarAlCarrito(nombre, precio) {
-            carrito.push({ nombre, precio });
-            actualizarCarrito();
-        }
-
-        function eliminarDelCarrito(index) {
-            carrito.splice(index, 1);
-            actualizarCarrito();
-        }
-
-        function vaciarCarrito() {
-            carrito = [];
-            actualizarCarrito();
-        }
-
-        function actualizarCarrito() {
-            const carritoElement = document.getElementById('carrito-list');
-            const carritoCount = document.getElementById('carrito-count');
-            carritoElement.innerHTML = '';
-            carrito.forEach((producto, index) => {
-                const li = document.createElement('li');
-                li.className = 'list-group-item d-flex justify-content-between align-items-center';
-                li.textContent = `${producto.nombre} - $${producto.precio}`;
-                const botonEliminar = document.createElement('button');
-                botonEliminar.className = 'btn btn-danger btn-sm';
-                botonEliminar.textContent = 'Eliminar';
-                botonEliminar.onclick = () => eliminarDelCarrito(index);
-                li.appendChild(botonEliminar);
-                carritoElement.appendChild(li);
-            });
-            carritoCount.textContent = carrito.length;
-        }
-
-        function enviarPorWhatsApp() {
-            const numero = '5493484698036'; // Reemplazar con el número de teléfono destino
-            let mensaje = 'Hola, me gustaría comprar estos productos:\n';
-            carrito.forEach(producto => {
-                mensaje += `- ${producto.nombre} - $${producto.precio}\n`;
-            });
-            const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
-                window.open(url, '_blank');
-        }
-
-        // Función para buscar productos
-        function buscarProductos() {
-            const input = document.getElementById('buscador').value.toLowerCase();
-            const productos = document.querySelectorAll('.producto');
-
-            productos.forEach(producto => {
-                const nombre = producto.querySelector('p').textContent.toLowerCase();
-                if (nombre.includes(input)) {
-                    producto.style.display = 'block';
-                } else {
-                    producto.style.display = 'none';
-                }
-            });
-        }
-
-        document.getElementById('buscador').addEventListener('input', buscarProductos);
-    </script>
+    <script src="js/scripts.js"></script>
 </body>
 </html>
