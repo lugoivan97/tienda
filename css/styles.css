@@ -32,7 +32,12 @@ body {
   width: 30%;
   margin-left: auto;
 }
-
+@media (max-width: 600px) {
+  .buscador {
+      width: 100%;
+      margin-left: 0;
+  }
+}
 header .blue-bg {
   background-color: rgb(111, 169, 228);
 }
@@ -46,7 +51,7 @@ header .navbar-nav .nav-item .nav-link {
 header .fuente-nav {
   font-family: Gorditas;
 }
-@media (min-width: 992px) {
+@media (min-width: 600px) {
   header .navbar-collapse {
     display: flex !important;
     justify-content: flex-end;
