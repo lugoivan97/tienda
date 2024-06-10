@@ -71,7 +71,10 @@
         <p class="productos-desc">¡Arma tu carrito como más te guste! Pero antes no olvides de fijarte nuestras
              <a class="ref-prom-prod" href="./promociones.html">PROMOCIONES</a>
         </p>
-        <section class="producto-grilla">
+        <div class="container">
+            <input type="text" id="buscador" class="form-control mb-4" placeholder="Buscar productos...">
+        </div>
+        <section class="producto-grilla" id="producto-grilla">
             <div class="producto">
                     <img src="img/imgjoystick1.jpg" alt="Joystick">
                     <p>Joystick 1</p>
@@ -203,7 +206,24 @@
             });
             const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
                 window.open(url, '_blank');
-            }
+        }
+
+        // Función para buscar productos
+        function buscarProductos() {
+            const input = document.getElementById('buscador').value.toLowerCase();
+            const productos = document.querySelectorAll('.producto');
+
+            productos.forEach(producto => {
+                const nombre = producto.querySelector('p').textContent.toLowerCase();
+                if (nombre.includes(input)) {
+                    producto.style.display = 'block';
+                } else {
+                    producto.style.display = 'none';
+                }
+            });
+        }
+
+        document.getElementById('buscador').addEventListener('input', buscarProductos);
     </script>
 </body>
 </html>
