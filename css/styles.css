@@ -165,7 +165,10 @@ footer {
   font-size: 200%;
   margin: 10px 0px 50px 10px;
 }
-
+.precios{
+  margin-top: auto;
+  font-size: 30px;
+}
 .producto-grilla {
   padding: 70px;
   display: grid;
@@ -174,15 +177,22 @@ footer {
 }
 
 .producto {
-  border: 1px solid #ddd;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+  min-height: 400px; /* Ajusta esta altura según sea necesario */
   border-radius: 8px;
   overflow: hidden;
   transition: transform 0.3s;
   margin: 0 auto;
 }
 .producto img {
-  width: 100%;
-  height: auto;
+    max-height: 200px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Mantiene la proporción de la imagen */
+    height: auto;
+    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
 }
 .producto p {
   margin-top: 0.5rem;
@@ -190,6 +200,7 @@ footer {
   color: black;
 }
 .producto button {
+  margin-top: auto;
   display: block;
   width: 100%;
   padding: 8px;
@@ -215,6 +226,15 @@ footer {
   .producto p {
     margin-top: 0.5rem;
     text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .producto img {
+      max-height: none; /* Permite que la imagen se ajuste completamente en móviles */
+  }
+
+  .producto {
+      min-height: auto; /* Ajusta la altura mínima para móviles */
   }
 }
 .seguinos-pro {
