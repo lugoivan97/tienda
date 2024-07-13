@@ -1,392 +1,196 @@
-@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&family=Gorditas:wght@400;700&family=Indie+Flower&display=swap");
+
+/* General styles */
 body {
-  font-family: Indie Flower;
-  background-color: #e9f4f6;
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  color: #333;
 }
-.btn-carrito{
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 1000;
-  display: flex;
-  align-items: center;
+
+/* Header styles */
+.navbar {
   background-color: #007bff;
-  color: white;
-  border: none;
-  border-radius: 50%;
-  width: 60px;
-  height: 60px;
-  justify-content: center;
 }
-.badge{
-  position: absolute;
-  top: 5px;
-  right: 5px;
-  background-color: red;
-  color: white;
-  border-radius: 50px;
-  padding: 5px 10px;
-  font-size: 12px;
-}
-.buscador{
-  width: 30%;
-  margin-left: auto;
-}
-@media (max-width: 600px) {
-  .buscador {
-      width: 100%;
-      margin-left: 0;
-  }
-}
-header .blue-bg {
-  background-color: rgb(111, 169, 228);
-}
-header .navbar-brand {
-  font-size: 25px;
+
+.navbar .navbar-brand {
+  font-size: 1.5rem;
   font-weight: bold;
-}
-header .navbar-nav .nav-item .nav-link {
-  padding: 8px 15px;
-}
-header .fuente-nav {
-  font-family: Gorditas;
-}
-@media (min-width: 600px) {
-  header .navbar-collapse {
-    display: flex !important;
-    justify-content: flex-end;
-  }
-  header .navbar-toggler {
-    display: none;
-  }
+  color: #fff;
 }
 
-.titulo-principal {
-  text-align: center;
-  font-family: Gorditas;
-  font-size: 500%;
-  margin: 30px;
-  margin-bottom: 70px;
-}
-@media (max-width: 600px) {
-  .titulo-principal {
-    font-size: 250%;
-  }
-}
-@media (max-width: 600px) {
-  .titulo-principal {
-    margin: 20px;
-  }
-}
-@media (max-width: 600px) {
-  .titulo-principal {
-    margin-bottom: 50px;
-  }
+.navbar .navbar-nav .nav-link {
+  color: #fff;
+  margin-right: 15px;
 }
 
-.novedades {
-  text-align: center;
-}
-.novedades h2 {
-  margin: 10px;
-  margin-bottom: 12px;
-}
-.novedades p {
-  text-align: left;
-  font-family: Indie Flower;
-  margin: 6px 0px 30px 10px;
-  font-size: 16px;
+.navbar .navbar-nav .nav-link:hover {
+  color: #ffc107;
 }
 
-.productos-p, .productos-desc {
-  text-align: left;
-  font-family: Indie Flower;
-  margin: 6px 0px 30px 10px;
-  font-size: 16px;
-}
-
-.ref-prom-prod {
-  cursor: pointer;
-  text-decoration: none;
-  color: inherit;
-}
-
-.img-novedad {
-  margin-bottom: 12px;
-}
-.img-novedad img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  transition: transform 0.3s;
-}
-.img-novedad img:hover {
-  transform: scale(1.05);
-}
-
-.mapa {
-  position: relative;
-  width: 100%;
-  padding-top: 56.25%;
-}
-.mapa iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-@media only screen and (min-width: 601px) {
-  .mapa {
-    width: 70%;
-    margin: 10px auto;
-  }
-}
-
-.logoig {
-  width: 70px;
-  height: auto;
-  transition: transform 0.3s;
-  padding: 2px;
-  margin: 2px;
-}
-.logoig:hover {
-  transform: scale(1.1);
-}
-
-footer {
-  text-align: center;
-  background-color: rgb(111, 169, 228);
-  color: #ffffff;
-  padding: 10px 0;
-}
-
+/* Main styles */
 .titulos {
-  font-size: 200%;
-  margin: 10px 0px 50px 10px;
-}
-.precios{
-  margin-top: auto;
-  font-size: 30px;
-}
-.producto-grilla {
-  padding: 70px;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
+  text-align: center;
+  margin: 20px 0;
 }
 
+.productos-desc {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.container {
+  display: flex;  
+  width: 30%;
+  justify-content: right;
+}
+
+.form-control {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+/* Media query para dispositivos móviles */
+@media (max-width: 768px) {
+  .container {
+      justify-content: center; /* Centra la barra de búsqueda en pantallas pequeñas */
+      width: 100%;
+  }
+
+  #buscador {
+      width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
+
+  }
+}
+
+/* Product grid styles */
+.producto-grilla {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+ 
+}
+
+/* Ensure each product box is the same size */
 .producto {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin: 15px;
+  padding: 15px;
+  text-align: center;
+  width: calc(30% - 30px); /* Adjust width and margins for better layout */
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: space-between;
-  height: 100%;
-  min-height: 400px; /* Ajusta esta altura según sea necesario */
-  border-radius: 8px;
-  overflow: hidden;
-  transition: transform 0.3s;
-  margin: 0 auto;
+  height: 400px; /* Set a fixed height */
+  box-sizing: border-box;
 }
+
 .producto img {
-    max-height: 200px; /* Ajusta la altura según sea necesario */
-    object-fit: cover; /* Mantiene la proporción de la imagen */
-    height: auto;
-    width: 100%; /* Asegúrate de que la imagen ocupe todo el ancho del contenedor */
+  max-width: 100%;
+  height: auto; /* Allow height to adjust automatically */
+  max-height: 200px; /* Fixed maximum height */
+  object-fit: contain; /* Fit image within the box while preserving aspect ratio */
+  border-radius: 5px;
+  margin-bottom: 10px;
 }
+
 .producto p {
-  margin-top: 0.5rem;
-  text-align: center;
-  color: black;
+  margin: 5px 0;
+  overflow: hidden; /* Ensures text does not overflow the box */
 }
+
+.producto .precios {
+  color: #007bff;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
 .producto button {
-  margin-top: auto;
-  display: block;
-  width: 100%;
-  padding: 8px;
   background-color: #007bff;
-  color: #ffffff;
   border: none;
-  border-radius: 4px;
+  border-radius: 5px;
+  color: #fff;
   cursor: pointer;
-  transition: background-color 0.3s;
+  padding: 10px 15px;
+  transition: background-color 0.3s ease;
+  align-self: center;
+  margin-top: auto; /* Pushes button to the bottom */
 }
+
 .producto button:hover {
   background-color: #0056b3;
 }
-.producto:hover {
-  transform: scale(1.05);
-}
 
-@media only screen and (max-width: 600px) {
-  .producto {
-    width: 100%;
-    height: auto;
-  }
-  .producto p {
-    margin-top: 0.5rem;
-    text-align: center;
-  }
-}
-@media (max-width: 768px) {
-  .producto img {
-      max-height: none; /* Permite que la imagen se ajuste completamente en móviles */
-  }
-
-  .producto {
-      min-height: auto; /* Ajusta la altura mínima para móviles */
-  }
-}
-.seguinos-pro {
-  margin: 20px 0px 5px 10px;
-}
-
-.vermas {
-  display: inline-block;
-  text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
-  color: #ffffff;
-  margin: 15px;
-  padding: 10px 5px;
-  cursor: pointer;
-  border-radius: 3px;
-  background-color: #007bff;
-}
-
-.ig-text {
-  margin-left: 15px;
-  display: inline-block;
-  text-decoration: none;
-  font-family: Gorditas;
-  color: black;
-}
-
-.form-text {
-  margin: 10px;
-  font-size: large;
-}
-
-.formulario-contacto {
-  max-width: 800px;
-  margin: auto;
-  margin-bottom: 20px;
-  padding: 20px;
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  background-color: rgb(98, 182, 206);
-}
-
-.form-grupo {
-  margin-bottom: 20px;
-}
-.form-grupo label {
-  display: block;
-  font-weight: bold;
-  margin-bottom: 5px;
-}
-.form-grupo input[type=text], .form-grupo input[type=email], .form-grupo textarea {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  font-size: 16px;
-}
-.form-grupo textarea {
-  height: 120px;
-}
-
-.btn-submit {
-  display: block;
-  width: 100%;
-  padding: 10px;
+/* Cart button styles */
+.btn-carrito {
+  background-color: #ffc107;
   border: none;
-  border-radius: 5px;
-  background-color: #007bff;
-  color: #ffffff;
-  font-size: 18px;
+  border-radius: 50%;
+  bottom: 20px;
+  color: #fff;
   cursor: pointer;
-}
-.btn-submit:hover {
-  background-color: #0056b3;
-}
-
-.container-nosotros {
-  max-width: 960px;
-  margin: 0 auto;
-  padding: 20px;
+  font-size: 24px;
+  height: 60px;
+  position: fixed;
+  right: 20px;
+  width: 60px;
+  z-index: 1000;
 }
 
-.video-container {
-  position: relative;
-  padding-bottom: 50%;
-  padding-top: 30px;
-  height: 0;
-  overflow: hidden;
-}
-.video-container iframe {
+.btn-carrito .badge {
+  background-color: #dc3545;
+  border-radius: 50%;
+  font-size: 14px;
+  padding: 5px 10px;
   position: absolute;
-  width: 100%;
-  height: 100%;
+  right: 5px;
+  top: 5px;
 }
 
-.nosotros {
-  margin-top: 20px;
-  padding: 20px;
-  font-family: Indie Flower;
-  font-size: large;
-}
-
-.img-nos {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
-}
-.img-nos img {
-  width: calc(33.33% - 10px);
-  margin-right: 10px;
-  border-radius: 8px;
-}
-@media only screen and (max-width: 600px) {
-  .img-nos {
-    flex-direction: column;
-  }
-  .img-nos img {
-    width: 100%;
-    margin-bottom: 10px;
-  }
-}
-
-.promociones {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  max-width: 960px;
-  margin: 20px auto;
-}
-.promociones .promocion {
-  width: calc(50% - 20px);
-  margin-bottom: 20px;
-  padding: 20px;
-}
-.promociones .promocion img {
-  width: 100%;
-}
-.promociones .promocion p {
+/* Footer styles */
+footer {
+  background-color: #007bff;
+  color: #fff;
+  padding: 10px 0;
   text-align: center;
-  margin-top: 10px;
-  font-size: 16px;
-  color: #666;
+  width: 100%;
+  position: relative;
+  bottom: 0;
+  left: 0;
 }
-.promociones .promocion-text {
+
+/* Instagram section */
+.seguinos-pro {
   text-align: center;
+  margin: 20px 0;
 }
-@media only screen and (max-width: 600px) {
-  .promociones {
-    flex-direction: column;
-  }
-  .promociones .promocion {
-    width: calc(100% - 20px);
+
+.logoig {
+  display: block;
+  margin-bottom: 10px;
+  margin: 10px auto;
+  max-width: 100px;
+  height: auto;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .producto {
+      width: calc(45% - 30px); /* Adjust width for smaller screens */
+      height: 350px; /* Adjust height for smaller screens */
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+@media (max-width: 576px) {
+  .producto {
+      width: calc(100% - 30px); /* Adjust width for smaller screens */
+      height: auto; /* Adjust height for smaller screens */
+  }
+
+  .btn-carrito {
+      height: 50px;
+      width: 50px;
+      font-size: 20px;
+  }
+}
