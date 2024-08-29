@@ -118,7 +118,7 @@ const productos = [
     {nombre: 'Teclado Mecanico Netmak', descripcion: 'NM-Skill 80%', precio: 55000, img:'./img/12044k.jpg"'},
     {nombre: 'Combo Teclado y Mouse Gamer', descripcion: 'Teclas Redondas NM-Vortex', precio: 23000, img:'./img/12046k.jpg"'},
     {nombre: 'Auricular Vincha Inalámbrico', descripcion: 'NM-Live Netmak', precio: 29000, img:'./img/12119k.jpg"'},
-    {nombre: 'Auricular Gamer Netmak', descripcion: 'Inalámbrico NM-35', precio: 85000, img:'./img/12120K.jpg"'},
+    {nombre: 'Auricular Gamer Netmak', descripcion: 'Inalámbrico NM-35', precio: 85000, img:'./img/12120k.jpg"'},
     {nombre: 'Mouse Gamer Netmak', descripcion: 'NM-Expert Netmak', precio: 9200, img:'./img/12125k.jpg"'},
     {nombre: 'Aro de Luz RGB Oryx', descripcion: '26cm + Tripode 2.10 mts', precio: 40000, img:'./img/10794k.jpg"'},
     {nombre: 'SmartWatch Netmak', descripcion: 'Reloj Inteligente NM-Plus', precio: 39000, img:'./img/10888k.jpg"'},
