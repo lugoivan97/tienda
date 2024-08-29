@@ -251,4 +251,11 @@ function actualizarCarrito() {
     const carritoCount = document.getElementById('carrito-count');
     carritoCount.textContent = carrito.length;
 }
+document.getElementById('btn-scroll-top').addEventListener('click', function() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+  
 displayProductos(productos);
