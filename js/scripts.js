@@ -46,11 +46,11 @@ const productos = [
     {nombre: 'Auricular Noga 26', descripcion: 'Auriculares Inalámbrico', precio: 31000, img: './img/auricularbtwinsnoga26.jpg'},
     {nombre: 'Auriculares Noga Btwins 28 Pro', descripcion: 'Auriculares Inálambrico', precio: 34000, img: './img/auricularbtwinsnoga28pro.jpg'},
     {nombre: 'Auricular Noga 29', descripcion: 'Auricular Inalámbrico', precio: 38000, img: './img/auricularbtwinsnoga29.jpg'},
-    {nombre: 'Auricular Noga 30 Pelota de Selección', descripcion: 'Auricular Inálambrica', precio: 25000, img: './img/auricularbtwinsnoga30pelotadelaseleccion.jpg'},
+    {nombre: 'Auricular Noga 30 Pelota de Selección', descripcion: 'Auricular Inálambrico', precio: 25000, img: './img/auricularbtwinsnoga30pelotadelaseleccion.jpg'},
     {nombre: 'Auricular Candy Spark Daewoo', descripcion: 'Auricular Inalámbrico Gold', precio: 25000, img: './img/auricularcandysparkdaewogold.jpg'},
     {nombre: 'Auricular Noga Inear BT-300', descripcion: 'Auriculares Inalámbricos BT-300', precio: 12000, img: './img/auricularnogainearbluethootbt-300.jpg'},
     {nombre: 'Auriculares Vincha Premium NG-A208', descripcion: 'Auriculares Bluetooth NG-A208', precio: 22000, img: './img/auricularnogavinchaarisng1208btpremium.jpg'},
-    {nombre: 'Auriculares Kosmo M10', descripcion: 'Auriculares Noga', precio: 20000, img: './img/auricularnogavinchang-a50btpremium.jpg'},
+    {nombre: 'Auriculares Noga A50', descripcion: 'Auriculares Noga Premium', precio: 49000, img: './img/auricularnogavinchang-a50btpremium.jpg'},
     {nombre: 'Auriculares Noga Vincha', descripcion: 'Auricular Premium', precio: 29000, img: './img/auricularnogavinchapremiumng918btrojo.jpg'},
     {nombre: 'Balanza De Baño', descripcion: 'Balanza Digital hasta 180kg', precio: 21000, img: './img/balanzabañopersonal180kg.jpg'},
     {nombre: 'Balanza Bluetooth', descripcion: 'Balanza con App Fitness', precio: 42000, img: './img/balanzapersonalbtappfitnesssuono.jpg'},
@@ -103,7 +103,7 @@ const productos = [
     {nombre: 'Lampara Velador Astronauta', descripcion: 'Lampara Recargable', precio: 12000, img:'./img/lamparaveladorastronautarecargable.jpg"'},
     {nombre: 'Raqueta Killer Trap', descripcion: 'Raqueta con linterna', precio: 15000, img:'./img/raquetakillertrap.jpg"'},
     {nombre: 'Termo Stanley + 3 Tazas', descripcion: 'Termo 500cc', precio: 32000, img:'./img/termostanley+3tazas500cc.jpg"'},
-    {nombre: 'Auricular Fan Pro Plus', descripcion: 'Auricular Inalambrico', precio: 20000, img:'./img/auricularinalambricofanprof10flus.jpg"'},
+    {nombre: 'Auricular Fan Pro Plus', descripcion: 'Auricular Inalámbrico', precio: 20000, img:'./img/auricularinalambricofanprof10flus.jpg"'},
     {nombre: 'Auricular Soul S389', descripcion: 'Auricular con cable', precio: 5600, img:'./img/auricularsouls389.jpg"'},
     {nombre: 'Camara Domo', descripcion: 'Camara Hyotshy', precio: 60000, img:'./img/camaradomohytoshy.jpg"'},
     {nombre: 'Mini Parlante Soul', descripcion: 'Parlante Karaoke', precio: 25000, img:'./img/miniparlantesoulkaraoke.jpg"'},
@@ -112,15 +112,40 @@ const productos = [
     {nombre: 'SmartWatch W26', descripcion: 'Reloj Inteligente', precio: 25000, img:'./img/relojsmartwatchw26.jpg"'},
     {nombre: 'Vaso Termico', descripcion: 'Vaso Acero Inox', precio: 20000, img:'./img/vasotermicoaceroinox.jpg"'},
     {nombre: 'Vaso Termico Parlante', descripcion: 'Vaso Cervezero', precio: 25000, img:'./img/vasotermicoconparlante.jpg"'},
-    {nombre: 'Termo Stanley 1L', descripcion: 'Termo 1 L', precio: 30000, img:'./img/termostanley1l.jpg"'},
-
-
-
+    {nombre: 'Auricular Vincha Suono', descripcion: 'Auricular Inalámbrico RGB', precio: 42000, img:'./img/12135k.jpg"'},
+    {nombre: 'Velador Proyector', descripcion: 'Proyector Galaxia 360°', precio: 32000, img:'./img/12133k.jpg"'},
+    {nombre: 'Teclado Mecanico Netmak', descripcion: 'NM-Dominate 60%', precio: 57000, img:'./img/12040k.jpg"'},
+    {nombre: 'Teclado Mecanico Netmak', descripcion: 'NM-Skill 80%', precio: 55000, img:'./img/12044k.jpg"'},
+    {nombre: 'Combo Teclado y Mouse Gamer', descripcion: 'Teclas Redondas NM-Vortex', precio: 23000, img:'./img/12046k.jpg"'},
+    {nombre: 'Auricular Vincha Inalámbrico', descripcion: 'NM-Live Netmak', precio: 29000, img:'./img/12119k.jpg"'},
+    {nombre: 'Auricular Gamer Netmak', descripcion: 'Inalámbrico NM-35', precio: 85000, img:'./img/12120K.jpg"'},
+    {nombre: 'Mouse Gamer Netmak', descripcion: 'NM-Expert Netmak', precio: 9200, img:'./img/12125k.jpg"'},
+    {nombre: 'Aro de Luz RGB Oryx', descripcion: '26cm + Tripode 2.10 mts', precio: 40000, img:'./img/10794k.jpg"'},
+    {nombre: 'SmartWatch Netmak', descripcion: 'Reloj Inteligente NM-Plus', precio: 39000, img:'./img/10888k.jpg"'},
+    {nombre: 'Cargador Iphone AAA', descripcion: 'Cargador + Cable 20W Tipo C', precio: 18000, img:'./img/11449k.jpg"'},
+    {nombre: 'Auricular Inear Ibek', descripcion: 'Auricular con cable', precio: 2600, img:'./img/11663k.jpg"'},
+    {nombre: 'Set de Ollas Oryx', descripcion: 'Ollas de Ceramica 3 Piezas ', precio: 25000, img:'./img/11822k.jpg"'},
+    {nombre: 'Luz led', descripcion: 'Luz led para bombillas', precio: 5900, img:'./img/12098k.jpg"'},
+    {nombre: 'Joystick PS3 Camuflado', descripcion: 'Joystick Estampado', precio: 29000, img:'./img/12138k.jpg"'},
+    {nombre: 'Pop It Electronico', descripcion: 'Pop It', precio: 12000, img:'./img/12139k.jpg"'},
+    {nombre: 'Limpiavidrios', descripcion: 'Limpiavidrio Magnetico', precio: 16000, img:'./img/12141k.jpg"'},
+    {nombre: 'Soporte Stream Netmak', descripcion: 'Incluye Microfono y Luz', precio: 32000, img:'./img/11390k.jpg"'},
+    {nombre: 'Mouse Netmak Inalámbrico', descripcion: 'NM-M680 Netmak', precio: 12000, img:'./img/11865k.jpg"'},
+    {nombre: 'Mouse Vertical Netmak', descripcion: 'Modelo Ergonomico', precio: 30000, img:'./img/11885k.jpg"'},
+    {nombre: 'SmartWatch Netmak', descripcion: 'Reloj Inteligente NM-Action', precio: 40000, img:'./img/12048k.jpg"'},
+    {nombre: 'Teclado Recargable BT 5.0', descripcion: 'Ranura para tablet', precio: 44000, img:'./img/12126K.jpg"'},
+    {nombre: 'Teclado y Mouse Netmak', descripcion: 'NM-KB850', precio: 33000, img:'./img/12127k.jpg"'},
+    {nombre: 'Termo Food Jar', descripcion: '1,2 Lts', precio: 50000, img:'./img/12084k.jpg"'},
+    {nombre: 'Zapatilla Alargue', descripcion: '4USB + 4 Enchufes', precio: 14000, img:'./img/12088k.jpg"'},
+    {nombre: 'Cargador Tipo C', descripcion: 'Cargador + Cable', precio: 9000, img:'./img/12089k.jpg"'},
+    {nombre: 'Termo mate acero', descripcion: '750cc Mate Listo', precio: 35000, img:'./img/11191k.jpg"'},
+    
 
 ];
 
 
 let carrito = [];
+
 
 function ordenarProductosPorNombre() {
     productos.sort((a, b) => {
@@ -138,16 +163,26 @@ function displayProductos(productos) {
     productos.forEach(producto => {
         const div = document.createElement('div');
         div.className = 'producto';
+        const productoEnCarrito = carrito.find(p => p.nombre === producto.nombre);
+        const cantidad = productoEnCarrito ? productoEnCarrito.cantidad : 0;
+
         div.innerHTML = `
             <img src="${producto.img}" alt="${producto.nombre}">
             <p>${producto.nombre}</p>
             <p>${producto.descripcion}</p>
             <p class="precios">$${producto.precio}</p>
-            <button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>
+            <div class="boton-carrito">
+                ${cantidad > 0 ? `
+                <button onclick="cambiarCantidad('${producto.nombre}', -1)">-</button>
+                <span>${cantidad}</span>
+                <button onclick="cambiarCantidad('${producto.nombre}', 1)">+</button>
+                ` : `<button onclick="agregarAlCarrito('${producto.nombre}', ${producto.precio})">Agregar al carrito</button>`}
+            </div>
         `;
         grilla.appendChild(div);
     });
 }
+
 
 function buscarProducto() {
     const input = document.getElementById('buscador').value.toLowerCase();
@@ -158,26 +193,45 @@ function buscarProducto() {
     displayProductos(productosFiltrados);
 }
 
+
 function agregarAlCarrito(nombre, precio) {
-    const producto = { nombre, precio };
-    carrito.push(producto);
+    const producto = carrito.find(p => p.nombre === nombre);
+    if (producto) {
+        producto.cantidad += 1;
+    } else {
+        carrito.push({ nombre, precio, cantidad: 1 });
+    }
     actualizarCarrito();
+    displayProductos(productos);
 }
 
-function eliminarDelCarrito(indice) {
-    carrito.splice(indice, 1);
+
+function cambiarCantidad(nombre, delta) {
+    const producto = carrito.find(p => p.nombre === nombre);
+    if (producto) {
+        producto.cantidad += delta;
+        if (producto.cantidad <= 0) {
+            eliminarDelCarrito(producto);
+        }
+    }
     actualizarCarrito();
+    displayProductos(productos); 
 }
+function eliminarDelCarrito(producto) {
+    carrito = carrito.filter(p => p.nombre !== producto.nombre);
+    actualizarCarrito();
+    displayProductos(productos);
+}
+
 
 function vaciarCarrito() {
     carrito = [];
     actualizarCarrito();
 }
-
 function enviarPorWhatsApp() {
-    const numero='5493484698036';
-    const mensaje = carrito.map(producto => `- ${producto.nombre}: $${producto.precio}`).join('\n');
-    const total = carrito.reduce((sum, producto) => sum + producto.precio, 0);
+    const numero = '5493484698036';
+    const mensaje = carrito.map(producto => `- ${producto.nombre}: $${producto.precio} (x${producto.cantidad})`).join('\n');
+    const total = carrito.reduce((sum, producto) => sum + producto.precio * producto.cantidad, 0);
 
     const url = `https://wa.me/${numero}?text=${encodeURIComponent(`Hola, me gustaría comprar los siguientes productos:\n${mensaje}\nTotal: $${total}`)}`;
     window.open(url, '_blank');
@@ -189,46 +243,12 @@ function actualizarCarrito() {
     carrito.forEach((producto, index) => {
         const li = document.createElement('li');
         li.className = 'list-group-item d-flex justify-content-between align-items-center';
-        li.innerHTML = `${producto.nombre} - $${producto.precio}
-            <button class="btn btn-danger btn-sm" onclick="eliminarDelCarrito(${index})">Eliminar</button>`;
+        li.innerHTML = `${producto.nombre} - $${producto.precio} x ${producto.cantidad}
+            <button class="btn btn-danger btn-sm" onclick="eliminarDelCarrito(carrito[${index}])">Eliminar</button>`;
         carritoList.appendChild(li);
     });
 
     const carritoCount = document.getElementById('carrito-count');
     carritoCount.textContent = carrito.length;
 }
-
-// Inicializar la vista con todos los productos
 displayProductos(productos);
-
-/*function agregarProducto() {
-    const nombre = prompt('Ingrese el nombre del producto:');
-    const descripcion = prompt('Ingrese la descripción del producto:');
-    const precio = parseFloat(prompt('Ingrese el precio del producto:'));
-    const img = prompt('Ingrese la URL de la imagen del producto:');
-
-    if (nombre && descripcion && !isNaN(precio) && img) {
-        const nuevoProducto = {
-            nombre: nombre,
-            descripcion: descripcion,
-            precio: precio,
-            img: img
-        };
-
-        productos.push(nuevoProducto);
-        alert('Producto agregado exitosamente');
-    } else {
-        alert('Por favor, complete todos los campos correctamente');
-    }
-}
-
-agregarProducto();
-*/
-function ordenarProductosPorNombre() {
-    productos.sort((a, b) => {
-        if (a.nombre.toLowerCase() < b.nombre.toLowerCase()) return -1;
-        if (a.nombre.toLowerCase() > b.nombre.toLowerCase()) return 1;
-        return 0;
-    });
-}
-ordenarProductosPorNombre();

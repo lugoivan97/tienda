@@ -1,12 +1,10 @@
-
-/* General styles */
 body {
   font-family: Arial, sans-serif;
   background-color: #f8f9fa;
   color: #333;
+  margin: 0;
+  padding: 0;
 }
-
-/* Header styles */
 .navbar {
   background-color: #007bff;
 }
@@ -25,8 +23,6 @@ body {
 .navbar .navbar-nav .nav-link:hover {
   color: #ffc107;
 }
-
-/* Main styles */
 .titulos {
   text-align: center;
   margin: 20px 0;
@@ -36,6 +32,7 @@ body {
   text-align: center;
   margin-bottom: 20px;
 }
+
 .container {
   display: flex;  
   width: 30%;
@@ -48,28 +45,24 @@ body {
   border-radius: 4px;
 }
 
-/* Media query para dispositivos móviles */
+
 @media (max-width: 768px) {
   .container {
-      justify-content: center; /* Centra la barra de búsqueda en pantallas pequeñas */
-      width: 100%;
+    justify-content: center; 
+    width: 100%;
   }
 
   #buscador {
-      width: 100%; /* Ocupa el ancho completo en pantallas pequeñas */
-
+    width: 100%; 
   }
 }
 
-/* Product grid styles */
 .producto-grilla {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
- 
 }
 
-/* Ensure each product box is the same size */
 .producto {
   background-color: #fff;
   border: 1px solid #ddd;
@@ -78,26 +71,26 @@ body {
   margin: 15px;
   padding: 15px;
   text-align: center;
-  width: calc(30% - 30px); /* Adjust width and margins for better layout */
+  width: calc(30% - 30px);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 400px; /* Set a fixed height */
+  height: 400px; 
   box-sizing: border-box;
 }
 
 .producto img {
   max-width: 100%;
-  height: auto; /* Allow height to adjust automatically */
-  max-height: 200px; /* Fixed maximum height */
-  object-fit: contain; /* Fit image within the box while preserving aspect ratio */
+  height: auto; 
+  max-height: 200px; 
+  object-fit: contain; 
   border-radius: 5px;
   margin-bottom: 10px;
 }
 
 .producto p {
   margin: 5px 0;
-  overflow: hidden; /* Ensures text does not overflow the box */
+  overflow: hidden;
 }
 
 .producto .precios {
@@ -115,14 +108,13 @@ body {
   padding: 10px 15px;
   transition: background-color 0.3s ease;
   align-self: center;
-  margin-top: auto; /* Pushes button to the bottom */
+  margin-top: auto;
 }
 
 .producto button:hover {
   background-color: #0056b3;
 }
 
-/* Cart button styles */
 .btn-carrito {
   background-color: #ffc107;
   border: none;
@@ -148,7 +140,7 @@ body {
   top: 5px;
 }
 
-/* Footer styles */
+
 footer {
   background-color: #007bff;
   color: #fff;
@@ -160,7 +152,7 @@ footer {
   left: 0;
 }
 
-/* Instagram section */
+
 .seguinos-pro {
   text-align: center;
   margin: 20px 0;
@@ -173,24 +165,33 @@ footer {
   max-width: 100px;
   height: auto;
 }
+.ig-text{
+  text-decoration: none;
+  color: inherit;
 
+}
+.ig-text:hover{
+    color: #000;
+    cursor: pointer; 
+
+}
 /* Responsive styles */
 @media (max-width: 768px) {
   .producto {
-      width: calc(45% - 30px); /* Adjust width for smaller screens */
-      height: 350px; /* Adjust height for smaller screens */
+    width: calc(45% - 30px); 
+    height: 350px;
   }
 }
 
 @media (max-width: 576px) {
   .producto {
-      width: calc(100% - 30px); /* Adjust width for smaller screens */
-      height: auto; /* Adjust height for smaller screens */
+    width: calc(100% - 30px);
+    height: auto;
   }
 
   .btn-carrito {
-      height: 50px;
-      width: 50px;
-      font-size: 20px;
+    height: 50px;
+    width: 50px;
+    font-size: 20px;
   }
 }
